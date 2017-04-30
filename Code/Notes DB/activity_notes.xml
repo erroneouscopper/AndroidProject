@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team3.phms.Notes"
+    android:background="#f389">
+
+    <GridLayout
+        android:id="@+id/NotesGrid"
+        android:layout_width="304dp"
+        android:layout_height="437dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="8dp"
+        tools:targetApi="ice_cream_sandwich">
+
+        <Button
+            android:id="@+id/addnote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:onClick="onClick"
+            android:text="Add Note"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="120dp" />
+
+        <Button
+            android:id="@+id/updatenote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/addnote"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:contextClickable="true"
+            android:text="Update Note" />
+
+        <ListView
+            android:id="@+id/notesListView"
+            android:layout_width="match_parent"
+            android:layout_height="378dp"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_row="0"
+            android:clickable="false"
+            android:contextClickable="false" />
+
+    </GridLayout>
+
+</android.support.constraint.ConstraintLayout>
